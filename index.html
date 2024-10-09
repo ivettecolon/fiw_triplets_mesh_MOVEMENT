@@ -34,14 +34,11 @@
         show_progress_bar:false,
         on_data_update: function(){
             jsPsych.data.addProperties({worker_id: urlvar.workerId});
-            //saveData(file, jsPsych.data.get().csv());
-            save_data;
         },
         on_finish: function(){
             jsPsych.data.addProperties({worker_id: urlvar.workerId});
-            //saveData(file, jsPsych.data.get().csv());
-            save_data;
-
+            window.location.assign("https://uwmadison.sona-systems.com/webstudy_credit.aspx?experiment_id=2116&credit_token=b055540765474d0c89e822572551b95b&survey_code="+urlvar.workerId);
+      
         },
         max_load_time: 120000
     });
