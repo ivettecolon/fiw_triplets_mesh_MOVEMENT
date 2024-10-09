@@ -47,16 +47,17 @@
     });
 
       var secret_code  = jsPsych.randomization.randomID(8);
-      var file_name = "fiw_triplets_mesh_movement_" + secret_code; // CHANGE THIS (file name)
+      var filename = "fiw_triplets_mesh_movement_" + secret_code; // CHANGE THIS (file name)
 
     // this is to save to OSF using DataPipe
-      var save_data = {
-        type: jsPsychPipe,
-        action: "save",
-        experiment_id: "", // CHANGE THIS
-        filename: file_name,
-        data_string: ()=>jsPsych.data.get().csv()
-      };
+
+    const save_data = {
+      type: jsPsychPipe,
+      action: "save",
+      experiment_id: "9iakTJHt75sc",
+      filename: filename,
+      data_string: ()=>jsPsych.data.get().csv()
+    };
 
           /* create timeline */
     var timeline = [];
@@ -217,7 +218,7 @@
                 html += 'Your browser does not support the video tag.';
                 html += '</video>';
                 html += '</div>';
-                html += '<br>Which is more similar in expression to the video on top? <br><strong>Press "f" for the video on the left, or "j" for the video on the right.';
+                html += '<br>Which is more similar to the video on top based on <strong> specific facial movements</strong>? <br><strong>Press "f" for the video on the left, or "j" for the video on the right.';
                 return html;
             },
             height: 400,
